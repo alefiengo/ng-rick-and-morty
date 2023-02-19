@@ -1,0 +1,27 @@
+<ng-container *ngIf="characterList">
+    <div class="filter">
+        <div class="item" (click)="getCharactersByStatus('')">
+            All
+        </div>
+        <div class="item" (click)="getCharactersByStatus('Alive')">
+            Alive
+        </div>
+        <div class="item" (click)="getCharactersByStatus('Dead')">
+            Dead
+        </div>
+        <div class="item" (click)="getCharactersByStatus('unknown')">
+            Unknown
+        </div>
+    </div>
+    
+    <div *ngIf="characters" class="characters">
+        <app-card-character [character]="character" *ngFor="let character of characters"></app-card-character>
+    </div>
+
+    <div *ngIf="!characterList">
+        <h4>Characters not found!</h4>
+    </div>
+</ng-container>
+<div *ngIf="!characterList">
+    <h4>Loading...</h4>
+</div>

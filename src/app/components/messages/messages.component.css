@@ -1,0 +1,25 @@
+.messages {
+    margin: 5rem auto;
+}
+
+button.clear {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eeeeee;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+    color: #333333;
+    margin-bottom: 12px;
+}
+
+button:hover {
+    background-color: #cfd8dc;
+}
+
+button:disabled {
+    background-color: #eeeeee;
+    color: #aaaaaa;
+    cursor: auto;
+}
